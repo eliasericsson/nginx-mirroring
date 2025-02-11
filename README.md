@@ -17,5 +17,5 @@ graph LR;
 ```
 
 ## How to use
-Run `docker compose up` to start the NGINX servers. The production server is available at `http://localhost:80` and the staging server is not exposed to the public.
+Run `docker compose up` to start the NGINX servers. The production server is available at [localhost](http://localhost:80)  and the staging server is not exposed to the public.
 
