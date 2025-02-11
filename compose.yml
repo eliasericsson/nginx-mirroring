@@ -1,0 +1,17 @@
+services:
+  proxy:
+    image: "nginx:1-alpine"
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/proxy.conf:/etc/nginx/conf.d/default.conf
+  prod:
+    image: "nginx:1-alpine"
+    volumes:
+      - ./nginx/prod.conf:/etc/nginx/conf.d/default.conf
+      - ./html/prod.html:/var/www/html/index.html
+  stage:
+    image: "nginx:1-alpine"
+    volumes:
+      - ./nginx/stage.conf:/etc/nginx/conf.d/default.conf
+      - ./html/stage.html:/var/www/html/index.html
